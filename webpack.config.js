@@ -7,8 +7,7 @@ module.exports = {
     filename: 'index.js',
     library: 'ajs',
     libraryTarget: 'umd',
-    libraryExport: 'default',
-    globalObject: 'this',
+    globalObject: 'this'
   },
   module: {
     rules: [

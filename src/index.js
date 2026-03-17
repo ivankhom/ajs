@@ -5,6 +5,10 @@ function info() {
   return m;
 }
 
-export default {
-  info
-};
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = info;
+} else if (typeof define === 'function' && define.amd) {
+  define([], function() { return info; });
+} else {
+  window.ajs = info;
+}
